@@ -3,8 +3,8 @@ CFLAGS = -Wall -Wextra -Isrc/include
 TARGET = template
 SRCDIR = src
 OBJDIR = obj
-SOURCES = $(SRCDIR)/main.c $(SRCDIR)/help.c
-OBJS = $(SOURCES:.c=.o)
+SOURCES = $(SRCDIR)/main.c $(SRCDIR)/help.c $(SRCDIR)/version.c
+OBJS = $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 .PHONY: all clean install uninstall
 
@@ -13,11 +13,14 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CC) $(OBJS) -o $@
 
-%.o: %.c
+$(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
+$(OBJDIR):
+	mkdir -p $(OBJDIR)
+
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -rf $(OBJDIR) $(TARGET)
 
 install:
 	install -Dm755 $(TARGET) $(DESTDIR)/usr/bin/$(TARGET)

@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include "include/help.h"
 
-/*
-void helper_function()
+void help()
 {
-        printf("Helper function called");
+        puts(HELP_MESSAGE);
 }
-*/
