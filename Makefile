@@ -3,7 +3,7 @@ CFLAGS = -Wall -Wextra -Isrc/include
 TARGET = template
 SRCDIR = src
 OBJDIR = obj
-SOURCES = $(SRCDIR)/main.c $(SRCDIR)/help.c $(SRCDIR)/version.c
+SOURCES = $(wildcard $(SRCDIR)/*.c)
 OBJS = $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 .PHONY: all clean install uninstall
