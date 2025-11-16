@@ -1,10 +1,10 @@
 # Maintainer: Denis "mudetoday" Kiselev <mudetoday@gmail.com>
-pkgname=template
+pkgname=loremipsum
 pkgver=1.0
 pkgrel=1
-pkgdesc="Base template for any package written in C."
+pkgdesc="Simple program to print a lorem ipsum text in stdout."
 arch=('x86_64')
-url="https://example.com/"
+url="https://example.com"
 license=('MIT')
 depends=('glibc')
 makedepends=('make')

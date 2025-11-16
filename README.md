@@ -1,12 +1,5 @@
-# Template pacman package
+# Lorem Ipsum
 
-Use this to make your own package quick, or to start new project.
-
-# Future updates
-
-- fix icons (idk how it should work)
-- getopt support
-- x server support
-- plugin support
+Use this to print a "Lorem Ipsum" text in standart output.
 
 Enjoy in any support from you.
