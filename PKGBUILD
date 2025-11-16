@@ -1,6 +1,6 @@
 # Maintainer: Denis "mudetoday" Kiselev <mudetoday@gmail.com>
 pkgname=loremipsum
-pkgver=1.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="Simple program to print a lorem ipsum text in stdout."
 arch=('x86_64')
