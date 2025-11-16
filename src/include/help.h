@@ -1,7 +1,7 @@
 #ifndef HELP_H
 #define HELP_H
 
-#define HELP_MESSAGE "This is a help message..."
+#define HELP_MESSAGE "Usage: loremipsum : stdout <- loremipsum."
 
 void help(void);
 
